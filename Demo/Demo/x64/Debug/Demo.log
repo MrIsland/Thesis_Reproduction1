@@ -1,0 +1,22 @@
+﻿  opencv1.cpp
+F:\MrIsland\Thesis_Reproduction1\Demo\Demo\opencv1.cpp(58,21): warning C4244: “=”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+          and
+          [
+              _Tp=float
+          ]
+F:\MrIsland\Thesis_Reproduction1\Demo\Demo\opencv1.cpp(59,21): warning C4244: “=”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+          and
+          [
+              _Tp=float
+          ]
+F:\MrIsland\Thesis_Reproduction1\Demo\Demo\opencv1.cpp(81,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+F:\MrIsland\Thesis_Reproduction1\Demo\Demo\opencv1.cpp(82,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  Demo.vcxproj -> F:\MrIsland\Thesis_Reproduction1\Demo\x64\Debug\Demo.exe
