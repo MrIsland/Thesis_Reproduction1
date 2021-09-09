@@ -1,4 +1,5 @@
 #include "opencv1.h"
+#include "opencv_iterative.h"
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -24,7 +25,9 @@ void func1_opencv1(string path[], Size board_size, int ln) {
 }
 
 void func2_opencv_Iterative(string path[], Size board_size, int ln) {
-	opencv_Iterative res;
+	opencv_iterative res;
+	res.set_mat(path, board_size, ln);
+	res.iterative(5);
 }
 
 int main() {
@@ -32,7 +35,7 @@ int main() {
 	//ofstream fout("calibration_result.txt");
 
 	Size image_size;
-	Size board_size = Size(7, 5);    /* 标定板上每行、列的角点数 */
+	Size board_size = Size(9, 6);    /* 标定板上每行、列的角点数 */
 	vector<Point2f> image_points_buf;  /* 缓存每幅图像上检测到的角点 */
 	vector<vector<Point2f>> image_points_seq; /* 保存检测到的所有角点 */
 
@@ -47,6 +50,7 @@ int main() {
 		}
 	}
 	cout << image_size.width << " " << image_size.height << endl;
-	func1_opencv1(str_path, board_size, image_count);
+	//func1_opencv1(str_path, board_size, image_count);
+	func2_opencv_Iterative(str_path, board_size, image_count);
 	return 0;
 }

@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="opencv1.cpp" />
+    <ClCompile Include="opencv_iterative.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv1.h" />
+    <ClInclude Include="opencv_iterative.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

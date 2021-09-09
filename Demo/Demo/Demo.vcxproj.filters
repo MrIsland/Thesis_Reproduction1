@@ -21,9 +21,15 @@
     <ClCompile Include="opencv1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="opencv_iterative.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_iterative.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
