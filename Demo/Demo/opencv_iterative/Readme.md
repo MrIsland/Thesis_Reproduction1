@@ -1,6 +1,6 @@
 Using Iterative methods to decrease the error of the camera calibration.
 
-![1](.\Readme.assets\1.png)
+![1](Demo/Demo/opencv_iterative/Readme.assets/1.png)
 
 ![2](.\Readme.assets\2.png)
 
