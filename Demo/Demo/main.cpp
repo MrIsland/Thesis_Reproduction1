@@ -1,5 +1,5 @@
-#include "opencv1.h"
-#include "opencv_iterative.h"
+#include "opencv1/opencv1.h"
+#include "open_iterative/opencv_iterative.h"
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -35,9 +35,9 @@ int main() {
 	//ofstream fout("calibration_result.txt");
 
 	Size image_size;
-	Size board_size = Size(9, 6);    /* ±ê¶¨°åÉÏÃ¿ĞĞ¡¢ÁĞµÄ½ÇµãÊı */
-	vector<Point2f> image_points_buf;  /* »º´æÃ¿·ùÍ¼ÏñÉÏ¼ì²âµ½µÄ½Çµã */
-	vector<vector<Point2f>> image_points_seq; /* ±£´æ¼ì²âµ½µÄËùÓĞ½Çµã */
+	Size board_size = Size(9, 6);    /* æ ‡å®šæ¿ä¸Šæ¯è¡Œã€åˆ—çš„è§’ç‚¹æ•° */
+	vector<Point2f> image_points_buf;  /* ç¼“å­˜æ¯å¹…å›¾åƒä¸Šæ£€æµ‹åˆ°çš„è§’ç‚¹ */
+	vector<vector<Point2f>> image_points_seq; /* ä¿å­˜æ£€æµ‹åˆ°çš„æ‰€æœ‰è§’ç‚¹ */
 
 	string filename;
 	while (getline(fin, filename)) {
