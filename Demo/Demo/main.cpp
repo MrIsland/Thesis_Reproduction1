@@ -1,5 +1,5 @@
 #include "opencv1/opencv1.h"
-#include "open_iterative/opencv_iterative.h"
+#include "opencv_iterative/opencv_iterative.h"
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
