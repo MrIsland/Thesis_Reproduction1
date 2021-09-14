@@ -18,18 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="opencv1.cpp">
+    <ClCompile Include="opencv_iterative\opencv_iterative.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="opencv_iterative.cpp">
+    <ClCompile Include="opencv1\opencv1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_circle\opencv_circle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_circle_iterative\opencv_circle_iterative.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="opencv1.h">
+    <ClInclude Include="opencv1\opencv1.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="opencv_iterative.h">
+    <ClInclude Include="opencv_iterative\opencv_iterative.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_circle\opencv_circle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_circle_iterative\opencv_circle_iterative.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

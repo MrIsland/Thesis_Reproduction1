@@ -7,6 +7,7 @@
 #include "opencv2/calib3d/calib3d.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include <iostream>
+#include <fstream>
 #include <vector>
 
 using namespace cv;
@@ -24,7 +25,7 @@ private:
 	double total_err = 0, err = 0;
 	vector<Point2f> srcTri[30], disTri[30];
 public:
-	void set_mat(string str[], Size bs, int ln);
+	void set_mat(Size bs);
 	void _FindCorner();
 	void calibration();
 	void init();

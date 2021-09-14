@@ -1,17 +1,21 @@
 #include "opencv_iterative.h"
 
-void opencv_iterative::set_mat(string str[], Size bs, int ln) {
-	this->src_count = ln;
+void opencv_iterative::set_mat(Size bs) {
+	this->src_count = 0;
 	this->board_size = bs;
 	this->cameraMatrix = Mat(3, 3, CV_32FC1, Scalar::all(0));
 	this->distCoeffs = Mat(1, 5, CV_32FC1, Scalar::all(0));
-	for (int i = 1; i <= ln; i++) {
-		this->src[i] = imread(str[i]);
-		if (i == 1) {
-			this->image_size.width = this->src[i].cols;
-			this->image_size.height = this->src[i].rows;
+	
+	ifstream fin("./calibdata1.txt");
+	string filename;
+	while (getline(fin, filename)) {
+		this->src[++src_count] = imread(filename);
+		if (src_count == 1) {
+			this->image_size.width = this->src[src_count].cols;
+			this->image_size.height = this->src[src_count].rows;
 		}
 	}
+	cout << "src_count " << " " << src_count << endl;
 }
  
 void opencv_iterative::init() {

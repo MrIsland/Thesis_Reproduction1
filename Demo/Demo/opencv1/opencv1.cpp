@@ -1,18 +1,21 @@
 #include "opencv1.h"
 
 
-void opencv1::set_mat(string str[], Size bs, int ln) {
-	this->src_count = ln; 
-	cout << "ln: " << ln << " " << src_count << endl;
-	for (int i = 1; i <= ln; i++) {
-		this->src[i] = imread(str[i]);
-		this->src[i].copyTo(this->gray_src[i]);
-		cvtColor(this->src[i], this->gray_src[i], COLOR_BGR2GRAY);
-		if (i == 1) {
-			this->image_size.width = this->src[i].cols;
-			this->image_size.height = this->src[i].rows;
+void opencv1::set_mat(Size bs) {
+	this->src_count = 0;
+	ifstream fin("./calibdata1.txt");
+
+	string filename;
+	while (getline(fin, filename)) {
+		this -> src[++src_count] = imread(filename);
+		this->src[src_count].copyTo(this->gray_src[src_count]);
+		cvtColor(this->src[src_count], this->gray_src[src_count], COLOR_BGR2GRAY);
+		if (src_count == 1) {
+			this->image_size.width = this->src[src_count].cols;
+			this->image_size.height = this->src[src_count].rows;
 		}
 	}
+
 	this->board_size = bs;
 	this->cameraMatrix = Mat(3, 3, CV_32FC1, Scalar::all(0));
 	this->distCoeffs = Mat(1, 5, CV_32FC1, Scalar::all(0));
@@ -29,7 +32,7 @@ void opencv1::_FindCorner() {
 	for (int i = 1; i <= ln; i++) {
 		cout << "i: " << i << endl;
 		vector <Point2f> image_points_buf;
-		if (findChessboardCorners(this->src[i], this->board_size, image_points_buf) == 0) {
+		if (findChessboardCorners(this->gray_src[i], this->board_size, image_points_buf) == 0) {
 			cout << "Can't find chessboard corners!\n";
 		}
 		else {
